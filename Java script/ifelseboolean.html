@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>metro</title>
+  </head>
+  <body>
+    <script>
+      let age = 75;
+      let gender = "male";
+      let finaldiscount;
+
+      if (age <= 5) {
+        finaldiscount = 100;
+      } else if (gender === "female" || age <= 8) {
+        finaldiscount = 50;
+      } else if (age >= 65) {
+        finaldiscount = 30;
+      } else {
+        finaldiscount = 0;
+      }
+      console.log(`your final discount is ${finaldiscount}`);
+
+      let school;
+
+      function place() {
+        console.log(`${school}`);
+      }
+      school = "ramakrishna";
+      place();
+      school = "holy";
+      place();
+      school = "kuvempu";
+      place();
+    </script>
+  </body>
+</html>

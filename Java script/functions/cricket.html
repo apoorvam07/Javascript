@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cricket</title>
+    <link rel="stylesheet" href="cricket.css" />
+  </head>
+  <body>
+    <h1>Bat Ball Stump</h1>
+
+    <button id="Bat" onclick="console.log('bat'); generateComputerChoice()">
+      Bat
+    </button>
+    <button id="Ball" onclick="console.log('ball'); generateComputerChoice()">
+      Ball
+    </button>
+    <button id="Stump" onclick="console.log('Stump');generateComputerChoice()">
+      Stump
+    </button>
+    <script>
+      function generateComputerChoice() {
+        let Choice;
+        let randomNumber = Math.random() * 3;
+        if (randomNumber > 0 && randomNumber <= 1) {
+          Choice = "Bat";
+          // console.log(' computer choice  is bat');
+        } else if (randomNumber > 1 && randomNumber <= 2) {
+          Choice = "Ball";
+          // console.log(' computer choice  is ball');
+        } else {
+          Choice = "Stump";
+          // console.log('computer choice  is Stump');
+        }
+        return Choice;
+      }
+    </script>
+  </body>
+</html>
