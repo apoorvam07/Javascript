@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects</title>
+  </head>
+  <body>
+    <script>
+      let product = {
+        size: "S",
+        name: "jeans",
+        fit: "pencil",
+        deliverytime: "allday",
+      };
+      console.log(product);
+      let order = product;
+      product.size = "M";
+      console.log(product);
+      order.fit = "baggy";
+      console.log(order);
+      console.log(product.deliverytime);
+      console.log(product[`deliverytime`]);
+      let obj = {
+        message: `good job`,
+        status: `complete`,
+      };
+      let { message } = obj;
+      console.log(message);
+    </script>
+  </body>
+</html>
