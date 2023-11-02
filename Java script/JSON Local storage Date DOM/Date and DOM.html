@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and DOM</title>
+  </head>
+  <body>
+    <div class="newdiv">div</div>
+    <script>
+      let Today = new Date();
+      // console.log(Today.getTime());
+      // console.log(Today.getFullYear());
+      // console.log(Today.getDay());
+      // console.log(Today.getMinutes());
+      // console.log(Today.getHours());
+      // console.log(Today.getMonth());
+      // console.log(Today);
+      let button = document.createElement("Button");
+      button.innerText = `HI`;
+      document.querySelector(".newdiv").appendChild(button);
+      document.querySelector(".newdiv").removeChild(button);
+    </script>
+  </body>
+</html>

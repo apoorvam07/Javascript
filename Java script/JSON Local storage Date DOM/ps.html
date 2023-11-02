@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #click {
+        height: 50px;
+        width: 50px;
+      }
+      .js-odd {
+        background-color: rgb(255, 0, 38);
+      }
+      .js-even {
+        background-color: rgb(9, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="message"></h3>
+
+    <button id="click" onclick="buttonPressed();">click</button>
+
+    <script>
+      let numberoftimesclicked =
+        localStorage.getItem(`numberoftimesclicked`) || 0;
+      let button;
+
+      function buttonPressed() {
+        console.log("press");
+        numberoftimesclicked++;
+        localStorage.setItem("numberoftimesclicked", numberoftimesclicked);
+        updateButton();
+      }
+
+      function updateButton() {
+        button = document.querySelector(`#click`);
+        numberoftimesclicked++;
+        if (numberoftimesclicked % 2 == 0) {
+          button.classList.remove("js-odd");
+          button.classList.add("js-even");
+        } else {
+          button.classList.remove("js-even");
+          button.classList.add("js-odd");
+        }
+        button.innerText = numberoftimesclicked;
+      }
+      updateButton();
+
+      function greeting(person) {
+        let time = new Date();
+        // console.log(time.getHours());
+        let greet = document.querySelector("#message");
+        if (5 < time.getHours() && time.getHours() < 12) {
+          greet.innerText = `good morning ${person}`;
+        } else if (12 < time.getHours() && time.getHours() < 16) {
+          greet.innerText = `good afternoon ${person}`;
+        } else if (time.getHours() > 16) {
+          greet.innerText = `good night ${person}`;
+        }
+        // console.log(greet);
+      }
+      greeting("apoo");
+    </script>
+  </body>
+</html>

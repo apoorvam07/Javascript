@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loop</title>
+  </head>
+  <body>
+    <script>
+      // let num = 1;
+      // while (num <= 10) {
+      //   console.log(num);
+      //   num++;
+      // }
+
+      // do {
+      //   console.log(num);
+      //   num++;
+      // } while (num <= 10);
+
+      for (let num = 1; num <= 14; num++) {
+        console.log(num);
+      }
+      let nums = [3, 4, 6, 9, 7];
+      for (let i = 0; i <= nums.length - 1; i++) {
+        console.log(nums[i]);
+      }
+
+      let squares = [];
+      for (let i = 0; i <= nums.length - 1; i++) {
+        squares[i] = nums[i] * nums[i];
+        console.log(squares[i]);
+      }
+
+      let arr = [1, 4, 5, 2, 3, 6];
+      for (let i = 0; i <= nums.length - 1; i++) {
+        console.log(arr[i]);
+        if (arr[i] == 3) {
+          console.log(`number found at the index ${i}`);
+          break;
+        }
+      }
+
+      for (let i = 1; i <= 25; i++) {
+        if (i % 2 == 0) {
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
+    </script>
+  </body>
+</html>

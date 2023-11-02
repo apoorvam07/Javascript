@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4];
+      let m = { hjjj: 9 };
+      console.log(numbers);
+      console.log(Array.isArray(numbers));
+      console.log(Array.isArray(m));
+      numbers.push(9);
+      console.log(numbers);
+      console.log(numbers.pop());
+
+      let arr = [3, , 97, 90, 76, 5, 7, 5, 9];
+      arr.splice(1, 2);
+      console.log(arr);
+      console.log(arr.toString());
+      console.log(arr.sort());
+      console.log(arr.valueOf());
+
+      let arr2 = arr;
+      arr2[0] = 99;
+      console.log(arr);
+
+      let [a, b, c, p] = arr2;
+      console.log(b, c);
+    </script>
+  </body>
+</html>
