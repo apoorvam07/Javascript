@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance functions</title>
+  </head>
+  <body>
+    <button id="mad"></button>
+    <script>
+      // let sum = function (num1, num2) {
+      //   return num1 + num2;
+      // };
+      // let newsum = sum;
+      // console.log(sum(4, 5));
+
+      // let square = (num) => {
+      //   return num * num;
+      // };
+      // console.log(square(5));
+
+      // let alarm = () => console.log("hi....");
+      // let timer = console.log(`oye ${alarm}`);
+      // console.log(setTimeout(timer, 5000));
+      // clearTimeout(timer);
+      let button = document.querySelector("#mad");
+      button.addEventListener("click", (event) => console.log("mmm"));
+
+      let num = [1, 2, 3, 4];
+      console.log(...num);
+    </script>
+  </body>
+</html>
