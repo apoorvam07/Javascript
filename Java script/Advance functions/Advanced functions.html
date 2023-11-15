@@ -6,28 +6,66 @@
     <title>Advance functions</title>
   </head>
   <body>
-    <button id="mad"></button>
+    <button id="mad">click</button>
     <script>
-      // let sum = function (num1, num2) {
-      //   return num1 + num2;
-      // };
-      // let newsum = sum;
-      // console.log(sum(4, 5));
+      // // let sum = function (num1, num2) {
+      // //   return num1 + num2;
+      // // };
+      // // let newsum = sum;
+      // // console.log(sum(4, 5));
 
-      // let square = (num) => {
-      //   return num * num;
-      // };
-      // console.log(square(5));
+      // // arrow functions
+      // // let square = (num) => {
+      // //   return num * num;
+      // // };
+      // // console.log(square(5));
 
-      // let alarm = () => console.log("hi....");
-      // let timer = console.log(`oye ${alarm}`);
-      // console.log(setTimeout(timer, 5000));
-      // clearTimeout(timer);
-      let button = document.querySelector("#mad");
-      button.addEventListener("click", (event) => console.log("mmm"));
+      // //Timing-Based Events
+      // // let alarm = () => console.log("hi....");
+      // // let timer = console.log(`oye ${alarm}`);
+      // // console.log(setTimeout(timer, 5000));
+      // // clearTimeout(timer);
 
-      let num = [1, 2, 3, 4];
-      console.log(...num);
+      // // EVent Listener()
+      // let button = document.querySelector("#mad");
+      // button.addEventListener("click", (event) => console.log("mmm"));
+
+      // // spread operator
+      // let num = [1, 2, 3, 4];
+      // console.log(...num);
+
+      // Hoisting
+      console.log(`my`);
+      var my = "mm";
+
+      // Lexical scoping
+      let a = 9;
+      const fun1 = () => {
+        let b = 9;
+        console.log(a + b);
+
+        const fun2 = () => {
+          let c = 9;
+          console.log(a + b + c);
+        };
+        fun2();
+        // console.log(a + b + c); // c cant be used
+      };
+      fun1();
+
+      //closures
+
+      //function currying
+      //  function sum(num1){
+      //   return function(num2){
+      //     return function(num3){
+      // console.log(num1+num2+num3);
+      //     }
+      //   }
+      //  }
+
+      const sum = (num1) => (num2) => (num3) => console.log(num1 + num2 + num3);
+      sum(4)(3)(9);
     </script>
   </body>
 </html>
