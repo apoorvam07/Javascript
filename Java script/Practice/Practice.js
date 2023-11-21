@@ -135,15 +135,58 @@ for (const flower of flowers) {
 // howManyletter();
 
 //max of numbers
-const numbers = [1, 2, 3, 4, 5, 7, 9, 9];
+//const numbers = [1, 2, 3, 4, 5, 7, 9, 9.09];
 
-function Max() {
-  for (const number of numbers) {
-    let result = numbers[0];
-    if (number > result) {
-      result = number;
+// function Max() {
+//   let result = numbers[0];
+//   for (const number of numbers) {
+//     if (number > result) {
+//       result = number;
+//     }
+//   }
+//   return result;
+// }
+// console.log(Max(numbers));
+
+//repeating letters
+const word = "hiiiiii";
+
+function letterFrequency(word) {
+  let result = {};
+  for (const letter of word) {
+    if (letter in result) {
+      result[letter] = result[letter] + 1; //result[letter]++
+    } else {
+      result[letter] = 1;
     }
   }
+
   return result;
 }
-console.log(Max());
+console.log(letterFrequency(word));
+
+// const sentence = "hi all what are u u doing";
+// let sentences = sentence.split(" ");
+// console.log(sentences);
+
+// function wordFrequency(sentence) {
+//   let result = {};
+
+//   for (const word of sentences) {
+//     if (word in result) {
+//       result[word] = result[word] + 1; //result[word]++
+//     } else {
+//       result[word] = 1;
+//     }
+//   }
+//   return result;
+// }
+// console.log(wordFrequency());
+
+//function using other function
+const sentence = "hi all what are u u doing";
+function wordFrequency(sentence) {
+  let sentences = sentence.split(" ");
+  return letterFrequency(sentences);
+}
+console.log(wordFrequency(sentence));
