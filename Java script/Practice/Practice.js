@@ -184,9 +184,16 @@ console.log(letterFrequency(word));
 // console.log(wordFrequency());
 
 //function using other function
-const sentence = "hi all what are u u doing";
-function wordFrequency(sentence) {
-  let sentences = sentence.split(" ");
-  return letterFrequency(sentences);
-}
-console.log(wordFrequency(sentence));
+// const sentence = "hi all what are u u doing";
+// function wordFrequency(sentence) {
+//   let sentences = sentence.split(" ");
+//   return letterFrequency(sentences);
+// }
+// console.log(wordFrequency(sentence));
+
+//higher order functions-map,filter,reduce
+
+const doubleMap = (numbers) => {
+  return numbers.map((number) => number * 2);
+};
+console.log(doubleMap[(1, 2, 3, 4)]);
