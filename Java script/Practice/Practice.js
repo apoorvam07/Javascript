@@ -149,21 +149,21 @@ for (const flower of flowers) {
 // console.log(Max(numbers));
 
 //repeating letters
-const word = "hiiiiii";
+// const word = "hiiiiii";
 
-function letterFrequency(word) {
-  let result = {};
-  for (const letter of word) {
-    if (letter in result) {
-      result[letter] = result[letter] + 1; //result[letter]++
-    } else {
-      result[letter] = 1;
-    }
-  }
+// function letterFrequency(word) {
+//   let result = {};
+//   for (const letter of word) {
+//     if (letter in result) {
+//       result[letter] = result[letter] + 1; //result[letter]++
+//     } else {
+//       result[letter] = 1;
+//     }
+//   }
 
-  return result;
-}
-console.log(letterFrequency(word));
+//   return result;
+// }
+// console.log(letterFrequency(word));
 
 // const sentence = "hi all what are u u doing";
 // let sentences = sentence.split(" ");
@@ -192,8 +192,66 @@ console.log(letterFrequency(word));
 // console.log(wordFrequency(sentence));
 
 //higher order functions-map,filter,reduce
+//map=loops and returns an array
 
-const doubleMap = (numbers) => {
-  return numbers.map((number) => number * 2);
+// [1, 2, 3, 4].map((number) => console.log(number));
+
+// const Map = (numbers) => {
+//   return numbers.map((number) => number);
+// };
+// console.log(Map([1, 2, 3, 4]));
+
+// const doubleMap = (numbers) => {
+//   return numbers.map((number) => number * 2);
+// };
+// console.log(doubleMap([1, 2, 3, 4]));
+
+//filter=loops and returns an array with matching condition
+// const numbers = [1, 2, 3, 4, 5, 6];
+// console.log(numbers.filter((number) => number >= 3));
+
+//reduce
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const result = numbers.reduce(function (prev, next) {
+//   return prev + next;
+// });
+// console.log(result);
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const sumwithReduce = (numbers) => numbers.reduce((number) => number);
+
+//Rest
+// function add(a, b, c, ...others) {
+//   return a + b + c;
+// }
+// const result = add(1, 2, 3, 4, 5, 6);
+// console.log(result);
+
+//Spread
+// const names = [`lilly`, `rose`, `lotus`];
+// function getNames(...name) {
+//   console.log(...name);
+// }
+// getNames(...names);
+
+// Promise
+let myPromise = new Promise(function (myResolve, myReject) {
+  myResolve();
+  myReject();
+});
+
+//closure
+var sum = function () {
+  return {
+    gettwoSum: function () {
+      return a + b;
+    },
+    getthreeSum: function () {
+      return a + b + c;
+    },
+  };
 };
-console.log(doubleMap[(1, 2, 3, 4)]);
+var store = Sum(4, 5, 6);
+console.log(sum.gettwoSum());
+console.log(sum.getthreeSum());
