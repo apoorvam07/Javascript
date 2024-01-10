@@ -242,16 +242,18 @@ let myPromise = new Promise(function (myResolve, myReject) {
 });
 
 //closure
-var sum = function () {
-  return {
-    gettwoSum: function () {
-      return a + b;
-    },
-    getthreeSum: function () {
-      return a + b + c;
-    },
-  };
-};
-var store = Sum(4, 5, 6);
-console.log(sum.gettwoSum());
-console.log(sum.getthreeSum());
+// var sum = function (a, b, c) {
+//   return {
+//     gettwoSum: function () {
+//       return a + b;
+//     },
+//     getthreeSum: function () {
+//       return a + b + c;
+//     },
+//   };
+// };
+// var store = sum(4, 5, 6);
+// console.log(store.gettwoSum());
+// console.log(store.getthreeSum());
+
+// 
